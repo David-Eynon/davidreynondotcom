@@ -10,7 +10,7 @@ from configparser import ConfigParser
 from lib.run_configs import RunConfigs
 from xml_report_access import XMLReportAccess
 
-class Emailer(object):
+class Emailer:
     
     REPORT_LOCATION = os.environ["CURRENT_REPORT_OUTPUT"];
     PROJECT_NAME = os.environ["PROJECT_NAME"];
