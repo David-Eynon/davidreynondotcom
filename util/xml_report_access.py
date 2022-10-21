@@ -1,7 +1,7 @@
 from bs4 import BeautifulSoup
 import os
 
-class XMLReportAccess(object):
+class XMLReportAccess:
 
 	def __init__(self):
 		raw_content = open(os.environ['CURRENT_REPORT_XML_OUTPUT'], 'r');
