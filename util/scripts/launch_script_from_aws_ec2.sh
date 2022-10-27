@@ -29,6 +29,7 @@ python3 $PROJECT_DIRECTORY/lib/run_proxy.py start
 python3 $PROJECT_DIRECTORY/util/import_test_run_config.py $1
 
 # Test runs
+#nosetests -a "!mobile" --exe --with-html --html-file=$CURRENT_REPORT_OUTPUT $PROJECT_DIRECTORY --with-xunit --xunit-file=$CURRENT_REPORT_XML_OUTPUT
 nosetests -a "!mobile" --exe --with-html --html-file=$CURRENT_REPORT_OUTPUT $PROJECT_DIRECTORY --with-xunit --xunit-file=$CURRENT_REPORT_XML_OUTPUT
 
 # contains logic so that it will not run proxy if config has proxy set to False
