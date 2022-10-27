@@ -56,7 +56,7 @@ class BasePage(BaseClass):
 		"""
 		try:
 			is_exists = self.get_elements(driver, prop, timeout=5);
-			return True;
+			return is_exists;
 		except TimeoutException:
 			self.logs("TimeoutException thrown, Element NOT located.")
 			return False;

@@ -39,9 +39,9 @@ class Emailer:
 
         yag = yagmail.SMTP('pyautonotification@gmail.com', email_pw)
         contents = ['Test results attached']
+
         subject = "TEST RESULT - [{}] - {} - {}".format(self.PROJECT_NAME, singular_status, self.today_date())
         yag.send('davidreynon@gmail.com', subject , contents, attachments=[self.REPORT_LOCATION])
-        print(self.REPORT_LOCATION)
 
 
     def main(self):
