@@ -12,4 +12,3 @@ class InitialTestTests(BaseTestClass):
         banner_txt = top_menu.get_top_menu_banner_text(self.driver)
         expected = top_menu.get_expected_menu_banner_text()
         self.assertEqual(banner_txt, expected)
-
