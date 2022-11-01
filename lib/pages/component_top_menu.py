@@ -25,3 +25,15 @@ class ComponentTopMenu(BasePage):
 
     def get_expected_menu_banner_text(self):
         return self.get_property("expected_top_title_name")
+
+    def get_expected_about_me_link_href(self):
+        return self.get_property("expected_about_me_link_href")
+
+    def get_expected_linked_in_link_href(self):
+        return self.get_property("expected_linkedin_link_href")
+
+    def get_expected_github_link_href(self):
+        return self.get_property("expected_github_link_href")
+
+    def get_expected_bitbucket_link_href(self):
+        return self.get_property("expected_bitbucket_link_href")
