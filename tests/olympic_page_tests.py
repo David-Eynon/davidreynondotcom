@@ -10,3 +10,4 @@ class LandingPageTests(BaseTestClass):
         page_text = olympic.get_page_text(self.driver)
         expected_text = olympic.get_expected_page_text()
         self.assertEqual(page_text, expected_text)
+    
