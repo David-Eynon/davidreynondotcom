@@ -15,6 +15,11 @@ class BaseClass(Logger):
 		return root_location
 
 	@property
+	def site_base_url(self):
+		site_base_url = RunConfigs()._site_base_url
+		return site_base_url
+
+	@property
 	def config_location(self):
 		config_location = 'config/pages/'
 		return config_location
