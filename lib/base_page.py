@@ -76,10 +76,18 @@ class BasePage(BaseClass):
 		}
 		return locator_map[string_parts[0]];
 
+	def get_base_site_url(self):
+		return self.site_base_url
+
 	def go_to_page(self, driver):
 		""" Child class inherits this, calling for its own url property
 		"""
-		driver.get(self.get_property('url'));
+		base_url = self.site_base_url
+		url_part = self.get_property('url')
+		if not url_part.startswith('/'):
+			url_part = "/" + url_part
+		full_url = "{}{}".format(base_url,url_part)
+		driver.get(full_url)
 
 	def get_property_lookup_value(self, key):
 		full_prop_string = self.get_full_property_value(key)

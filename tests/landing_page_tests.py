@@ -7,6 +7,11 @@ import time
 
 class LandingPageTests(BaseTestClass):
 
+    def test_refactor_base_url(self):
+        home_page = HomePage()
+        home_page.go_to_page(self.driver)
+
+
     def test_landing_page_about_me_display_component_elements_loaded_as_expected(self):
         home_page = HomePage()
         home_page.go_to_page(self.driver)
@@ -93,4 +98,3 @@ class LandingPageTests(BaseTestClass):
         bitbucket_link = bottom_menu.get_bitbucket_link_bottom_menu(self.driver).get_attribute('href')
         expected = bottom_menu.get_expected_bitbucket_link_href()
         self.assertEqual(bitbucket_link, expected)        
-        

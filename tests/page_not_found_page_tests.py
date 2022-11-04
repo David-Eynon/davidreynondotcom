@@ -4,7 +4,7 @@ from lib.pages.page_not_found_page import PageNotFoundPage
 import time
 
 class PageNotFoundPageTests(BaseTestClass):
-    
+
     def test_page_not_found_is_on_current_page(self):
         homepage = HomePage()
         homepage.go_to_page(self.driver)

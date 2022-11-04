@@ -27,7 +27,7 @@ class ComponentBottomMenu(BasePage):
         return self.get_property("expected_bottom_title_name")
 
     def get_expected_about_me_link_href(self):
-        return self.get_property("expected_about_me_link_href")
+        return self.get_base_site_url() + self.get_property("expected_about_me_link_href")
 
     def get_expected_linked_in_link_href(self):
         return self.get_property("expected_linkedin_link_href")
