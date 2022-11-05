@@ -19,3 +19,4 @@ class PageNotFoundPageTests(BaseTestClass):
         page_status = not_found.get_page_status(self.driver)
         expected = not_found.get_expected_page_status()
         self.assertEqual(page_status, expected)
+        
