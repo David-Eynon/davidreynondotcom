@@ -37,3 +37,6 @@ class ComponentBottomMenu(BasePage):
 
     def get_expected_bitbucket_link_href(self):
         return self.get_property("expected_bitbucket_link_href")
+
+    def get_copyright_year_bottom_menu_text(self, driver):
+        return self.get_element(driver, "copyright_year_bottom_menu").text

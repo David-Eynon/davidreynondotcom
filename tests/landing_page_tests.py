@@ -1,11 +1,21 @@
+import time
+from datetime import date
+
 from lib.base_test_class import BaseTestClass
 from lib.pages.component_top_menu import ComponentTopMenu
 from lib.pages.component_bottom_menu import ComponentBottomMenu
 from lib.pages.component_display_container import ComponentDisplayContainer
 from lib.pages.home_page import HomePage
-import time
 
 class LandingPageTests(BaseTestClass):
+
+    def test_landing_page_bottom_menu_copyright_year_is_current_year(self):
+        home_page = HomePage()
+        bottom_menu = ComponentBottomMenu()
+        home_page.go_to_page(self.driver)
+        actual_copyright_year = bottom_menu.get_copyright_year_bottom_menu_text(self.driver)
+        expected_copyright_year = str(date.today().year)
+        self.assertEqual(actual_copyright_year, expected_copyright_year)
 
     def test_landing_page_about_me_display_component_elements_loaded_as_expected(self):
         home_page = HomePage()
